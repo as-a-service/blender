@@ -6,7 +6,7 @@ from flask import send_file
 from flask import request
 from subprocess import call
 
-blender_file = 'script.blend'
+blender_file = 'outrun.blend'
 location = '/tmp/'
 suffix = 'tempfile'
 filename = location + suffix + '0001.png'
