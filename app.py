@@ -7,7 +7,7 @@ from flask import request
 from flask import abort
 from subprocess import call
 
-blender_file = 'outrun.blend'
+blender_file = 'outrun-simple.blend'
 location = '/tmp/'
 suffix = 'tempfile'
 filename = location + suffix + '0001.png'
