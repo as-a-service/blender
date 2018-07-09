@@ -16,8 +16,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def render():
-    name = request.args.get('name', default = 'Your name', type = str)
-    app.logger.info("Received name: %s" % name)
+    name = request.args.get('title', default = 'YOUR TITLE', type = str)
+    app.logger.info("Received title: %s" % name)
 
     # This script changes the text, it is run inside Blender. 
     blender_expression = "import bpy; bpy.data.objects['Text'].data.body = '%s'" % name
