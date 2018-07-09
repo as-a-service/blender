@@ -4,6 +4,7 @@ from io import BytesIO
 from flask import Flask
 from flask import send_file
 from flask import request
+from flask import abort
 from subprocess import call
 
 blender_file = 'outrun.blend'
@@ -25,9 +26,14 @@ def render():
     
     return send_file(filename, mimetype='image/png')
 
+@app.route('/favicon.ico')
+def favicon():
+    abort(404)
+
 @app.after_request
 def cleanup(response):
-    os.remove(filename)
+    if os.path.isfile(filename):
+        os.remove(filename)
     return response
 
 
