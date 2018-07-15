@@ -7,7 +7,7 @@ from flask import request
 from flask import abort
 from subprocess import call
 
-blender_file = 'outrun-simple.blend'
+blender_file = 'next.blend'
 location = '/tmp/'
 suffix = 'tempfile'
 filename = location + suffix + '0001.png'
@@ -16,11 +16,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def render():
-    name = request.args.get('title', default = 'YOUR TITLE', type = str)
-    app.logger.info("Received title: %s" % name)
+    message = request.args.get('location', default = 'LOCATION', type = str)
+    app.logger.info("Received message: %s" % message)
 
     # This script changes the text, it is run inside Blender. 
-    blender_expression = "import bpy; bpy.data.objects['Text'].data.body = '%s'" % name
+    blender_expression = "import bpy; bpy.data.objects['Text'].data.body = '%s'" % message
     # Render 3D image
     call('blender -b %s --python-expr "%s" -o %s%s -f 1' % (blender_file, blender_expression, location, suffix), shell=True)
     
