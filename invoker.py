@@ -1,15 +1,12 @@
 import function
 
 import os
+import shutil
 
 from flask import Flask
 from flask import request
 from flask import abort
 from subprocess import call
-
-location = '/tmp/'
-suffix = 'tempfile'
-filename = location + suffix + '0001.png'
 
 app = Flask(__name__)
 
@@ -23,8 +20,7 @@ def favicon():
 
 @app.after_request
 def cleanup(response):
-    if os.path.isfile(filename):
-        os.remove(filename)
+    shutil.rmtree('/tmp/renders')
     return response
 
 if __name__ == "__main__":

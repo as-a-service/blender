@@ -2,7 +2,7 @@ from flask import send_file
 from subprocess import call
 
 def render(request):
-    location = '/tmp/'
+    location = '/tmp/renders/'
     suffix = 'tempfile'
     filename = location + suffix + '0001.png'
     
