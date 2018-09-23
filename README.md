@@ -1,6 +1,8 @@
-# Render Blender 3D scenes on your server (using Docker)
+# Render Blender 3D scenes in the cloud (using Docker)
 
-A simple web server that renders a [Blender](http://www.blender.org/) 3D scene with custom text.
+A simple web app that renders a [Blender](http://www.blender.org/) 3D scene with custom text.
+
+Example: https://render-fu4lqx2yaq-uc.a.run.app/?scene=outrun-filter&text=BLENDER
 
 ## API
 
