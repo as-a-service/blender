@@ -9,7 +9,4 @@ COPY . $APP_HOME
 WORKDIR $APP_HOME
 
 RUN pip install Flask
-
-EXPOSE 8080
-
-CMD ["python", "app.py"]
+CMD ["python", "invoker.py"]
