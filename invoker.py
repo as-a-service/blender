@@ -14,13 +14,11 @@ app = Flask(__name__)
 def invoke():
 	return function.render(request)
 
-@app.route('/favicon.ico')
-def favicon():
-    abort(404)
-
 @app.after_request
 def cleanup(response):
-    shutil.rmtree('/tmp/renders')
+    location = '/tmp/renders'
+    if os.path.isdir(location):
+        shutil.rmtree(location)
     return response
 
 if __name__ == "__main__":
