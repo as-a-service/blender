@@ -4,6 +4,8 @@ A simple web app that renders a [Blender](http://www.blender.org/) 3D scene with
 
 Example: https://render-fu4lqx2yaq-uc.a.run.app/?scene=outrun-filter&text=BLENDER
 
+Run with `docker run -p 8080:8080 gcr.io/steren-demo/render`
+
 ## API
 
 ### URL parameters:
