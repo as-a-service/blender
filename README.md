@@ -2,7 +2,7 @@
 
 A simple web app that renders a [Blender](http://www.blender.org/) 3D scene with custom text.
 
-Run with `docker run -p 8080:8080 gcr.io/steren-demo/render`
+Run with `docker run -p 8080:8080 gcr.io/as-a-service-dev/render`
 
 ## API
 
