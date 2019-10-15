@@ -4,7 +4,7 @@ A simple web app that renders a [Blender](http://www.blender.org/) 3D scene with
 
 Run with `docker run -p 8080:8080 gcr.io/as-a-service-dev/render`
 
-[![Run on Google Cloud](https://storage.googleapis.com/cloudrun/button.png)](https://console.cloud.google.com/cloudshell/editor?shellonly=true&cloudshell_image=gcr.io/cloudrun/button&cloudshell_git_repo=https://github.com/as-a-service/render.git)
+[![Run on Google Cloud](https://storage.googleapis.com/cloudrun/button.svg)](https://deploy.cloud.run)
 
 ## API
 
