@@ -25,3 +25,5 @@ Example: `/?text=OUTRUN&scene=outrun`
 * Build with `docker build . -t render`
 * Start with `docker run -p 8080:8080 render`
 * Open in your browser at `http://localhost:8080/?text=Hey`
+
+![Cloud Build](https://badger-l7zawt5jsq-uw.a.run.app/build/status?project=as-a-service-dev&id=c19e0b78-b8f0-4ff2-bccb-9b694837d0fc)
