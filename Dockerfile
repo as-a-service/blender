@@ -1,4 +1,8 @@
-FROM ubuntu:22.04
+# For GPU, use:
+# FROM nvidia/cudagl:11.3.0-devel-ubuntu20.04
+
+# For CPU, use:
+FROM ubuntu:20.04
 
 ENV DEBIAN_FRONTEND noninteractive
 
