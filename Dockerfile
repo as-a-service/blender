@@ -1,19 +1,21 @@
 # For GPU, use:
-# FROM nvidia/cudagl:11.3.0-devel-ubuntu20.04
+FROM nvidia/cuda:12.8.0-base-ubuntu24.04
+# For CPU-only, use:
+# FROM ubuntu:24.04
 
-# For CPU, use:
-FROM ubuntu:20.04
+LABEL Title="Blender in Docker wiht GPU, as a service"
 
-ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update && \
-	apt-get install -y \
+RUN apt-get update && apt-get install -y \
 		python3-pip \
 		blender
 
-ENV APP_HOME /app
+ENV APP_HOME=/app
 COPY . $APP_HOME
 WORKDIR $APP_HOME
 
-RUN pip install Flask
+RUN apt-get install -y python3-flask
+
+#RUN pip install Flask
 CMD ["python3", "invoker.py"]
