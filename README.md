@@ -1,5 +1,8 @@
 # Render Blender 3D scenes in the cloud (using Docker)
 
+> [!WARNING]
+> This code is provided as is and has not been reviewed for security issues. Do not expose these services publicly and do not use in production.
+
 A simple web service that renders a [Blender](http://www.blender.org/) 3D scene with custom text.
 
 Run with `docker run -p 8080:8080 steren/blender-as-a-service`
